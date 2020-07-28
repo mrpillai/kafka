@@ -14,15 +14,15 @@ public class UserController {
 	@Autowired
 	KafkaTemplate<String, User> kafkaTemplate ;
 	
-	private static final String TOPIC = "Kafka_Example";
+	private static final String TOPIC = "Kafka_Example_json";
 
 	
 	@GetMapping("/publish/{name}")
 	public String post(@PathVariable("name") String name){
 		
-		kafkaTemplate.send(TOPIC, new User(name,"Tech",12000L));
+		kafkaTemplate.send(TOPIC, new User(name,"Tech"/*,12000L*/));
 		
-		return "";
+		return "Published successfully";
 		
 	}
 	

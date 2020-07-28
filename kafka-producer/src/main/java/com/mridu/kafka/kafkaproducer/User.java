@@ -4,7 +4,7 @@ public class User {
 
 	private String name;
 	private String dept;
-	private Long salary;
+	//private Long salary;
 	public String getName() {
 		return name;
 	}
@@ -17,22 +17,22 @@ public class User {
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
-	public Long getSalary() {
+	/*public Long getSalary() {
 		return salary;
 	}
 	public void setSalary(Long salary) {
 		this.salary = salary;
-	}
+	}*/
 	/**
 	 * @param name
 	 * @param dept
 	 * @param salary
 	 */
-	public User(String name, String dept, Long salary) {
+	public User(String name, String dept/*, Long salary*/) {
 		super();
 		this.name = name;
 		this.dept = dept;
-		this.salary = salary;
+		//this.salary = salary;
 	}
 	
 	
